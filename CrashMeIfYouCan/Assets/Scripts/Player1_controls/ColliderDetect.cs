@@ -13,6 +13,9 @@ public class ColliderDetect : MonoBehaviour {
 	public Collider Collider_Body;
 	public Stats statList;
 
+	public ParticleSystem tyreDirt_Left;
+	public ParticleSystem tyreDirt_Right;
+
 	public float ExplosionForce;
 	public float ExplosionRadius;
 	public float InvincibilityDuration = 5f;
@@ -70,6 +73,10 @@ public class ColliderDetect : MonoBehaviour {
 			RB_WheelLeft.AddExplosionForce(ExplosionForce, other.transform.position, ExplosionRadius);
 			RB_WheelRight.AddExplosionForce(ExplosionForce, other.transform.position, ExplosionRadius);
 			Collider_Body.isTrigger = false;
+
+			tyreDirt_Left.Stop();
+			tyreDirt_Right.Stop();
+
 		}
 
 	}

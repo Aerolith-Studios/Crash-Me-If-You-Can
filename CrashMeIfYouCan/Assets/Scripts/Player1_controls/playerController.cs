@@ -13,7 +13,7 @@ public class playerController: MonoBehaviour {
 	public Transform Body;
 	
 
-	int direction;
+	string direction;
 	float timeStartedLerping;
 	Vector3 gravDown;
 	Quaternion target;
@@ -51,25 +51,22 @@ public class playerController: MonoBehaviour {
 			target = Quaternion.identity;
 		}
 
-//		if (transform.position.y > 1.33f) {
-			transform.rotation = Quaternion.Lerp (transform.rotation, target, Time.deltaTime * flipRotationSpeed);
-//		}
+		transform.rotation = Quaternion.Lerp (transform.rotation, target, Time.deltaTime * flipRotationSpeed);
 
 		if (gravSwitcher.isGrounded == true) {
 
 			float keyInput = Input.GetAxisRaw ("Horizontal");
 
-			if (statList.controlInverted = true) {
+			if (statList.controlInverted == true) {
 				keyInput *= -1;
 			}
 
-			if (keyInput < 0 && (transform.position.x < 2.5) && (isLerping == false) && (statList.invertControlCount >= 1)){
-				direction = 1;
+			if (keyInput < 0 && (transform.position.x > -2.5f) && (isLerping == false)) {// && (statList.invertControlCount >= 1)){
+				direction = "left";
 				startLerping ();
-				//isSwitching = false;
-//				print ("swithced");
-			} else if (keyInput > 0 && (transform.position.x > -2.5) && (isLerping == false)) {
-				direction = 0;
+
+			} else if (keyInput > 0 && (transform.position.x < 2.5f) && (isLerping == false)) {
+				direction = "right";
 				startLerping ();
 			}
 		}
@@ -81,10 +78,10 @@ public class playerController: MonoBehaviour {
 		timeStartedLerping = Time.time;
 		startPos = transform.position;
 
-		if (direction == 0) {
+		if (direction == "left") {
 			endPos = transform.position + Vector3.left * distanceToMove;
 
-		} else if (direction == 1) {
+		} else if (direction == "right") {
 			endPos = transform.position + Vector3.right * distanceToMove;
 
 		}
