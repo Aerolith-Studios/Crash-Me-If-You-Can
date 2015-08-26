@@ -3,7 +3,7 @@ Repo for Crash Me If You Can - Our Adelaide Game Jam project continues!
 
 Well, hey guys! Welcome to the new Aerolith Studios account!
 
-A few really quick things.. 
+A few really quick things:
 
 1. When you guys are fiddling with code and new features, please save it in an appropriate branch.
 2. When you're completely done and the feature works perfectly with no bugs, create a Pull Request for everyone to review the changes.
