@@ -1,5 +1,5 @@
 # CrashMeIfYouCan
-Repo for Crash Me if You Can - Our Adelaide Game Jam game continues!
+Repo for Crash Me If You Can - Our Adelaide Game Jam project continues!
 
 Well, hey guys! Welcome to the new Aerolith Studios account!
 
