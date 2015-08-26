@@ -17,7 +17,13 @@ public class PlaneMover : MonoBehaviour {
 		transform.position += Vector3.forward * -PlaneSpeed;
 		if (transform.position.z < respawnTrigger) {
 			transform.position += Vector3.forward * respawnDist;
-			// Destroy Hazards here.
+
+			// Begin destroying hazards.
+			Transform hazards = transform.FindChild("Hazards");
+			foreach (Transform hazard in hazards.transform) {
+				GameObject.Destroy(hazard.gameObject);
+			}
+
 			
 			BroadcastMessage("generateHazards", false);
 		}

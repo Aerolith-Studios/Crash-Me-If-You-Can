@@ -3,12 +3,14 @@ using System.Collections;
 
 public class GrassSpawning : MonoBehaviour {
 
-	public Vector3 squarePos;  //world position of your square
-	public Vector3 squareSize; //x = width, y = height, z = length of box
 	public float squareBorder; //how far away from the edges you want the spawn to stay
 	public GameObject GrassPrefab;
 	public float grassDensity = 60;
 	public bool isGround = true;
+
+	
+	private Vector3 squarePos;  //world position of your square
+	private Vector3 squareSize; //x = width, y = height, z = length of box
 	private Quaternion spawnRot;
 	private float spawnPosY;
 
