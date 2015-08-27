@@ -4,28 +4,29 @@ using System.Collections;
 public class HazardGenerator : MonoBehaviour {
 
 	public GameObject[] forestHazards; 			// List of Forest Hazards set in the inspector.
-//	public GameObject[] roadHazards; 			// List of Road Hazards set in the inspector.
+	public GameObject[] roadHazards; 			// List of Road Hazards set in the inspector.
 //	public GameObject[] desertHazards; 			// List of Desert Hazards set in the inspector.
-	public GameObject[] hazard; 				// List of Hazards set in the script.
+	public GameObject[][] hazards; 				// List of Hazards set in the script.
 
 //	private GameObject[,] hazardTypeArray = {forestHazards};
 
 	int HazardChoice;
 
 	void Start () {
+		hazards = new GameObject[][] {forestHazards, roadHazards};
 		BroadcastMessage ("generateHazards", true);
 	}
 
 	void generateHazards(bool firstSpawn = false) {
 
-		// Hazards must equal forestHazards until the new hazard types are ready.
-//		GameObject[] hazards = hazardTypeArray[0];
-		GameObject[] hazards = forestHazards;
+		// set all tracks on this plane to inactive.
+		foreach (Transform track in transform.Find ("Tracks")) {
+			track.gameObject.SetActive (false);
+		}
 
-//		// Used to populate the correct hazards into the hazards array.
-//		GameObject[] hazard = forestHazards + roadHazards + desertHazards;
-//		int hazardType = Random.Range(0, 3);
-//		hazards = hazard[hazardType];
+		// Choose a random Hazard type (road, forest, desert etc) and set THAT track to active. Also used to change the hazard type at line 56.
+		int trackType = Random.Range (0, hazards.Length);		
+		transform.Find ("Tracks").GetChild (trackType).gameObject.SetActive (true);
 
 		// Get the plane length and divide by the GM/stats hazardDensity to find hazard spacing. Use the first Hazard in the list to get originZ position.
 		float planeLength = transform.localScale.z * 10;
@@ -52,9 +53,9 @@ public class HazardGenerator : MonoBehaviour {
 
 			// Feed the object it's own xPos, the plane's yPos, and the newly generated zPos.
 				// The rotation is the object's own xRot & yRot, but the plane's zRot.
-			GameObject RandomHazard = hazards [hazardChoice];
+			GameObject RandomHazard = hazards [trackType][hazardChoice];
 			Vector3 spawnPos_Hazard = new Vector3 (RandomHazard.transform.position.x, transform.position.y, spawnPos_HazardZ);
-			Quaternion spawnRot_Hazard = Quaternion.Euler (0, 90, transform.eulerAngles.z);
+			Quaternion spawnRot_Hazard = Quaternion.Euler (RandomHazard.transform.eulerAngles.x, RandomHazard.transform.eulerAngles.y, transform.eulerAngles.z);
 			
 			// Instantiate the hazard and child it to the plane under "Hazards".
 			GameObject newHazard = Instantiate (RandomHazard, spawnPos_Hazard, spawnRot_Hazard) as GameObject;

@@ -7,8 +7,6 @@ public class GravitySwitcher : MonoBehaviour {
 	public int gravityScale = 3;
 	public bool timerStarted = false;
 	public playerController playCtrl;
-
-//	private bool passedMidway = true;
 	
 	// Use this for initialization
 	void Start () {
@@ -40,6 +38,7 @@ public class GravitySwitcher : MonoBehaviour {
 		if ((Input.GetKeyDown ("space")) && (isGrounded == true) && (timerStarted == false)) {
 			Physics.gravity *= -1;
 			isGrounded = false;
+			GameObject.Find ("GravityAudio").GetComponent<AudioSource>().Play();
 		}
 	}
 
