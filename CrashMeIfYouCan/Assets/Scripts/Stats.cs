@@ -11,10 +11,12 @@ public class Stats : MonoBehaviour {
 	public int invertControlCount = 100;
 	public int speedUpCount = 100;
 	public int slowDownCount = 100;
-
-	public bool controlInverted;
+	
 
 	// Controller variables.
 	public float planeSpeed = 0.75f;
+	public bool controlInverted = false;
+
+	public float HazardDensity;
 
 }
