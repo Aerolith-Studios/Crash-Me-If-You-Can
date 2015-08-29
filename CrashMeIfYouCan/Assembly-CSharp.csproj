@@ -50,6 +50,8 @@
      <Compile Include="Assets\Scripts\Environment\HazardGenerator.cs" />
      <Compile Include="Assets\Scripts\Environment\PlaneMover.cs" />
      <Compile Include="Assets\Scripts\Environment\SkyBox_Rotator.cs" />
+     <Compile Include="Assets\Scripts\Environment\TokenGenerator.cs" />
+     <Compile Include="Assets\Scripts\Environment\TokenRotator.cs" />
      <Compile Include="Assets\Scripts\GUI\Game Scene\Return_To_Menu.cs" />
      <Compile Include="Assets\Scripts\GUI\Game Scene\Stat_Update.cs" />
      <Compile Include="Assets\Scripts\GUI\MainScene\Play_Button.cs" />
