@@ -17,6 +17,6 @@ public class Stats : MonoBehaviour {
 	public float planeSpeed = 0.75f;
 	public bool controlInverted = false;
 
-	public float HazardDensity;
+	public int HazardDensity = 10;
 
 }
