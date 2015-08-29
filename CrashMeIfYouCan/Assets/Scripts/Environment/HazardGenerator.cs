@@ -9,7 +9,6 @@ public class HazardGenerator : MonoBehaviour {
 //	public GameObject[] desertHazards; 			// List of Desert Hazards set in the inspector.
 	public GameObject[][] hazards; 				// List of Hazards set in the script.
 
-//	private GameObject[,] hazardTypeArray = {forestHazards};
 
 	int placeHolder_Choice;
 	int hazardChoice;
@@ -18,7 +17,6 @@ public class HazardGenerator : MonoBehaviour {
 	void Start () {
 		hazards = new GameObject[][] {forestHazards, roadHazards};
 		generateHazards (true);
-//		BroadcastMessage ("generateHazards", true);
 	}
 
 	void generateHazards(bool firstSpawn = false) {
