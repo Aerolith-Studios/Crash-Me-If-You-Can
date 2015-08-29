@@ -1,9 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Player1_controls\ColliderDetect.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Environment\TokenGenerator.cs">
     <Files>
-      <File FileName="Assets\Scripts\Environment\TokenGenerator.cs" Line="23" Column="3" />
-      <File FileName="Assets\Scripts\Environment\TokenRotator.cs" Line="10" Column="29" />
+      <File FileName="Assets\Scripts\Environment\TokenGenerator.cs" Line="35" Column="74" />
+      <File FileName="Assets\Scripts\Environment\TokenRotator.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Player1_controls\ColliderDetect.cs" Line="45" Column="1" />
       <File FileName="Assets\Scripts\Environment\PlaneMover.cs" Line="1" Column="1" />
     </Files>
