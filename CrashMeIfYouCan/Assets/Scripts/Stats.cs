@@ -7,6 +7,7 @@ public class Stats : MonoBehaviour {
 	public int playerScore = 0;
 
 	// Token Counters
+	public int gravitySwitcherCount = 0;
 	public int cameraFlipCount = 0;
 	public int invertControlCount = 0;
 	public int speedUpCount = 0;
@@ -25,10 +26,11 @@ public class Stats : MonoBehaviour {
 
 	void Start(){
 		playerScore = 0;
-		cameraFlipCount = 0;
+		gravitySwitcherCount = 2;
+		cameraFlipCount = 10;
 		invertControlCount = 0;
-		speedUpCount = 0;
-		slowDownCount = 0;
+		speedUpCount = 5;
+		slowDownCount = 5;
 		planeSpeed = 0.75f;
 		controlInverted = false;
 		HazardDensity = 10f;

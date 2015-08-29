@@ -6,6 +6,8 @@ public class GravitySwitcher : MonoBehaviour {
 	public bool isGrounded = false;
 	public int gravityScale = 3;
 	public bool timerStarted = false;
+	public bool gravitySwitchStart = false;
+	public bool canSwitch = true;
 	public playerController playCtrl;
 	
 	// Use this for initialization
@@ -35,11 +37,23 @@ public class GravitySwitcher : MonoBehaviour {
 			StartCoroutine ("groundedTimer");
 		}
 
-		if ((Input.GetKeyDown ("space")) && (isGrounded == true) && (timerStarted == false)) {
+		if ((Input.GetKeyDown ("1")) && (canSwitch == true) && (isGrounded == true) && (timerStarted == false) && (GameObject.Find("GM").GetComponent<Stats>().gravitySwitcherCount > 0)) {
 			Physics.gravity *= -1;
 			isGrounded = false;
+			GameObject.Find("GM").GetComponent<Stats>().gravitySwitcherCount--;
 			GameObject.Find ("GravityAudio").GetComponent<AudioSource>().Play();
+			gravitySwitchStart = true;
+			StartCoroutine ("GravityTimer");
+			GameObject.Find ("GM").GetComponent<Stats>().playerScore += 50;
 		}
 	}
 
+	IEnumerator GravityTimer(){
+		while (gravitySwitchStart == true) {
+			canSwitch = false;
+			yield return new WaitForSeconds (5f);
+			canSwitch = true;
+			gravitySwitchStart = false;
+		}
+	}
 }

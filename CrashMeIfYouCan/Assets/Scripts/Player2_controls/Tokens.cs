@@ -25,7 +25,7 @@ public class Tokens : MonoBehaviour {
 	{
 		if (other.gameObject.CompareTag ("Player")) {
 
-			statList.playerScore += 1;
+			statList.playerScore += 10;
 			print("Collided");
 			SetCountText ();
 		}
