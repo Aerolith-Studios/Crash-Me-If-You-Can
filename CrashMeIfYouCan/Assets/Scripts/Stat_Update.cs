@@ -12,7 +12,7 @@ public class Stat_Update : MonoBehaviour {
 	private Text text4;
 	private Text text5;
 	private Text scoreText;
-	
+	private bool gameStarted = true;
 
 	// Use this for initialization
 	void Start () {
@@ -26,6 +26,10 @@ public class Stat_Update : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if ((Physics.gravity.y != -58.9) && (gameStarted == true)) {
+			Physics.gravity = new Vector3 (0f, -58.9f, 0f);
+			gameStarted = false;
+		}
 		scoreText.text = stats.playerScore.ToString();
 		text1.text = stats.cameraFlipCount.ToString();
 		text2.text = stats.invertControlCount.ToString();

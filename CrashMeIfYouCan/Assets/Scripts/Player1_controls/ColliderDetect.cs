@@ -63,6 +63,14 @@ public class ColliderDetect : MonoBehaviour {
 
 		// Hazard collide event.
 		} else if (other.gameObject.CompareTag ("Hazard") && (invincible == false)) {
+			// Turn off the player's controls.
+			gameObject.GetComponent<playerController>().enabled = false;
+			// Open the game over window.
+			GameObject.Find ("Canvas/Game/Game_Over_Window").SetActive(true);
+			// Stop the Score Incrementer Coroutine.
+			GameObject.Find ("GM").GetComponent<Stats>().StopCoroutine("ScoreIncrementer");
+			// Stop the Speed Incrementer Coroutine.
+			GameObject.Find ("GM").GetComponent<Stats>().StopCoroutine("SpeedIncrementer");
 
 			RB_Main.isKinematic = true;
 			RB_Body.isKinematic = false;

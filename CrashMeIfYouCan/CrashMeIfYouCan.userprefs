@@ -1,11 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Environment\HazardGenerator.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Stats.cs">
     <Files>
-      <File FileName="Assets\Scripts\Player1_controls\playerController.cs" Line="106" Column="1" />
-      <File FileName="Assets\Scripts\Player2_controls\GravitySwitcher.cs" Line="41" Column="1" />
-      <File FileName="Assets\Scripts\Environment\HazardGenerator.cs" Line="27" Column="95" />
-      <File FileName="Assets\Scripts\Environment\PlaneMover.cs" Line="1" Column="1" />
+      <File FileName="..\..\..\Game Jam\CrashMeIfYouCan\CrashMeIfYouCan\Assets\Scripts\GUI\Game Scene\Play_Again_Button.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GUI\MainScene\Play_Button.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GUI\Game Scene\Play_Again_Button.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Player1_controls\ColliderDetect.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Stat_Update.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Stats.cs" Line="37" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

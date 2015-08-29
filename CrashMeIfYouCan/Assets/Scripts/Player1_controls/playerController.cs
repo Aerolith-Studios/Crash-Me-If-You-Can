@@ -9,7 +9,7 @@ public class playerController: MonoBehaviour {
 	public bool isSwitching = false;
 	public float distanceToMove;
 	public bool isLerping;
-	public float timeTakenDuringLerp = 0.4f;
+	public float timeTakenDuringLerp = 0.1f;
 	public Transform Body;
 	
 
