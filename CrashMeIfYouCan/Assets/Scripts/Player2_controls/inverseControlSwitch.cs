@@ -12,6 +12,7 @@ public class inverseControlSwitch : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown ("2") && statList.invertControlCount > 0) {
+			statList.invertControlCount--;
 			statList.controlInverted = true;
 			StartCoroutine ("InverseTimer");
 		}
