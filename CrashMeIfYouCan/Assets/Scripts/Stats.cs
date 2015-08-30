@@ -28,7 +28,7 @@ public class Stats : MonoBehaviour {
 		playerScore = 0;
 		gravitySwitcherCount = 2;
 		cameraFlipCount = 10;
-		invertControlCount = 0;
+		invertControlCount = 10;
 		speedUpCount = 5;
 		slowDownCount = 5;
 		planeSpeed = 0.75f;
