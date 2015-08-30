@@ -19,7 +19,7 @@ public class Stats : MonoBehaviour {
 	public bool controlInverted = false;
 
 	// Hazard variables.
-	public float HazardDensity = 10f;
+	public int HazardDensity = 5;
 
 	// GameStarted bool.
 	public bool gameStarted = true;
@@ -33,7 +33,7 @@ public class Stats : MonoBehaviour {
 		slowDownCount = 5;
 		planeSpeed = 0.75f;
 		controlInverted = false;
-		HazardDensity = 10f;
+		HazardDensity = 5;
 		gameStarted = true;
 		StartCoroutine ("ScoreIncrementer");
 		StartCoroutine ("SpeedIncrementer");

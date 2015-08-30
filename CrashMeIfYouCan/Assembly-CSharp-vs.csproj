@@ -46,18 +46,12 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts - backup\Broken - for error ref only\playerController - old.cs" />
-     <Compile Include="Assets\Scripts - backup\Broken - for error ref only\playerController-old.cs" />
-     <Compile Include="Assets\Scripts - backup\GravitySwitcher Backup.cs" />
-     <Compile Include="Assets\Scripts - backup\HazardGenerator Backup.cs" />
-     <Compile Include="Assets\Scripts - backup\PlaneMover Backup.cs" />
-     <Compile Include="Assets\Scripts - backup\PlaneMover.cs" />
-     <Compile Include="Assets\Scripts - backup\PlaneMoverbackup2.cs" />
-     <Compile Include="Assets\Scripts - backup\Tokens Backup.cs" />
      <Compile Include="Assets\Scripts\Environment\GrassSpawning.cs" />
      <Compile Include="Assets\Scripts\Environment\HazardGenerator.cs" />
      <Compile Include="Assets\Scripts\Environment\PlaneMover.cs" />
      <Compile Include="Assets\Scripts\Environment\SkyBox_Rotator.cs" />
+     <Compile Include="Assets\Scripts\Environment\TokenGenerator.cs" />
+     <Compile Include="Assets\Scripts\Environment\TokenRotator.cs" />
      <Compile Include="Assets\Scripts\GUI\Game Scene\Play_Again_Button.cs" />
      <Compile Include="Assets\Scripts\GUI\Game Scene\Return_To_Menu.cs" />
      <Compile Include="Assets\Scripts\GUI\MainScene\Play_Button.cs" />

@@ -39,27 +39,30 @@ public class ColliderDetect : MonoBehaviour {
 	
 	void OnTriggerEnter(Collider other) {
 
-		if (other.gameObject.CompareTag ("cameraFlip")) {
-			statList.playerScore += 1;
-			statList.cameraFlipCount += 1;
-			print ("Collided" + statList.playerScore);
-			Destroy(other);
+		if (other.gameObject.CompareTag ("gravitySwitch")) {
+			statList.playerScore += 50;
+			statList.gravitySwitcherCount ++;
+			Destroy (other.gameObject);
+		} else if (other.gameObject.CompareTag ("cameraFlip")) {
+			statList.playerScore += 50;
+			statList.cameraFlipCount ++;
+			Destroy(other.gameObject);
 		} else if (other.gameObject.CompareTag ("inverseController")) {
-			statList.playerScore += 1;
-			statList.invertControlCount += 1;
-			Destroy(other);
+			statList.playerScore += 50;
+			statList.invertControlCount ++;
+			Destroy(other.gameObject);
 		} else if (other.gameObject.CompareTag ("Invincible")) {
 			StartCoroutine ("triggerInvincible");
-			statList.playerScore += 1;
-			Destroy(other);
+			statList.playerScore ++;
+			Destroy(other.gameObject);
 		} else if (other.gameObject.CompareTag ("speedUp")) {
-			statList.playerScore += 1;
-			statList.speedUpCount += 1;
-			Destroy(other);
+			statList.playerScore += 50;
+			statList.speedUpCount ++;
+			Destroy(other.gameObject);
 		} else if (other.gameObject.CompareTag ("slowDown")) {
-			statList.playerScore += 1;
-			statList.slowDownCount += 1;
-			Destroy(other);
+			statList.playerScore += 50;
+			statList.slowDownCount ++;
+			Destroy(other.gameObject);
 
 		// Hazard collide event.
 		} else if (other.gameObject.CompareTag ("Hazard") && (invincible == false)) {
@@ -84,7 +87,6 @@ public class ColliderDetect : MonoBehaviour {
 
 			tyreDirt_Left.Stop();
 			tyreDirt_Right.Stop();
-
 		}
 
 	}

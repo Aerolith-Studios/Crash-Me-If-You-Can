@@ -25,7 +25,7 @@ public class Speedup : MonoBehaviour {
 			speedStatus = true;
 			stats.speedUpCount--;
 			StartCoroutine ("SpeedTimer");
-			stats.playerScore += 100;
+			stats.playerScore += 300;
 		}
 		else if((Input.GetKeyDown ("4")) && (stats.slowDownCount > 0) && (speedStart == false)) {
 //			print("Slowing");
@@ -42,12 +42,12 @@ public class Speedup : MonoBehaviour {
 	IEnumerator SpeedTimer(){
 		while (speedStart == true) {
 			yield return new WaitForSeconds (5f);
-			if (speedStatus == true) {
-				stats.planeSpeed = stats.planeSpeed * slowDown;
-			}
-			else if (speedStatus == false) {
-				stats.planeSpeed = stats.planeSpeed * speedUp;
-			}
+//			if (speedStatus == true) {
+//				stats.planeSpeed = stats.planeSpeed * slowDown;
+//			}
+//			else if (speedStatus == false) {
+//				stats.planeSpeed = stats.planeSpeed * speedUp;
+//			}
 			speedStart = false;
 		}
 	}
