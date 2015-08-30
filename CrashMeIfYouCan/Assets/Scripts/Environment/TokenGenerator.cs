@@ -24,10 +24,17 @@ public class TokenGenerator : MonoBehaviour {
 		float halfLength = transform.localScale.z * 5;
 
 		for (int i = 1; i <= tokensPerPlane; i++) {
-
+			float trackChooser = Random.Range (1,2);
 			float xPos = Random.Range (transform.position.x - halfWidth, transform.position.x + halfWidth);
-			float yPos = Random.Range (borderBuffer, 5.5f);
+			float yPos;
 			float zPos = Random.Range (transform.position.z - halfLength, transform.position.z + halfLength);
+
+			if (trackChooser == 1){
+				yPos = 1.5f;
+			} else {
+				yPos = 10.5f;
+			}
+
 
 			Vector3 newTokenPos = new Vector3 (xPos, transform.position.y, zPos) + transform.up * yPos;
 
