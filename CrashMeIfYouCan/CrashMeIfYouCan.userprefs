@@ -1,12 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Environment\TokenGenerator.cs">
     <Files>
-      <File FileName="Assets\Scripts\Environment\TokenGenerator.cs" Line="27" Column="43" />
-      <File FileName="Assets\Scripts\Player1_controls\playerController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Player2_controls\inverseControlSwitch.cs" Line="15" Column="34" />
-      <File FileName="Assets\Scripts\Player2_controls\Speedup.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Stats.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Environment\TokenGenerator.cs" Line="28" Column="25" />
+      <File FileName="..\..\..\Unity\Aerolith Studios\CrashMeIfYouCan\CrashMeIfYouCan_3.4 - Lighting test with Adam\Assets\Scripts\Environment\TokenGenerator.cs" Line="36" Column="61" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
