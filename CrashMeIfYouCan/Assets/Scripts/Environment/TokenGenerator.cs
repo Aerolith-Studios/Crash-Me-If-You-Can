@@ -25,7 +25,6 @@ public class TokenGenerator : MonoBehaviour {
 
 		for (int i = 1; i <= tokensPerPlane; i++) {
 			float trackChooser = Random.Range (1,2);
-			print (trackChooser);
 			float xPos = Random.Range (transform.position.x - halfWidth, transform.position.x + halfWidth);
 			float yPos;
 			float zPos = Random.Range (transform.position.z - halfLength, transform.position.z + halfLength);
