@@ -36,7 +36,7 @@ public class GrassSpawning : MonoBehaviour {
 			
 			var spawnPos = squarePos + new Vector3 (Random.Range (-squareSize.x, squareSize.x), spawnPosY, Random.Range (-squareSize.z, squareSize.z)) * 0.5f;
 			var spawnedGrass = Instantiate (thePrefabYouWantToSpawn, spawnPos, spawnRot) as GameObject;
-			spawnedGrass.transform.parent = transform.FindChild("Grass");
+			spawnedGrass.transform.parent = transform.FindChild("Tracks/Track_Forest");
 			grassDensity --;
 		}
 	}
