@@ -3,8 +3,8 @@ using System.Collections;
 
 public class GrassSpawning : MonoBehaviour {
 
-	public float squareBorder; //how far away from the edges you want the spawn to stay
 	public GameObject GrassPrefab;
+	public float squareBorder; //how far away from the edges you want the spawn to stay
 	public float grassDensity = 60;
 	public bool isGround = true;
 
